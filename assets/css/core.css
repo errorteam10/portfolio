@@ -1,0 +1,301 @@
+/**
+*
+* 
+*
+*
+*
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+/* font-family: 'Open Sans', sans-serif; */
+
+html {
+    scroll-behavior: smooth;
+
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    transition: 250ms ease-in-out;
+
+}
+
+main {
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+main::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+main::-webkit-scrollbar-track {
+    background: #272932;
+}
+
+/* Handle */
+main::-webkit-scrollbar-thumb {
+    background: #4D7EA8;
+    border-radius: 1.2em;
+}
+
+/* Handle on hover */
+main::-webkit-scrollbar-thumb:hover {
+    background: grey;
+}
+
+
+
+
+
+
+body.hidden {
+    transition: 250ms ease-in-out;
+    margin-right: -250px;
+}
+
+.overlay-dark {
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+}
+
+.overlay-light {
+    background-color: rgba(255, 255, 255, 0.5);
+    background-blend-mode: overlay;
+}
+
+/* ~~~~~~~~ [ Side Nav] ~~~~~~~~*/
+
+nav {
+    display: inline-block;
+    float: left;
+
+    /* Sizing & Spacing */
+    z-index: 15;
+    height: 100vh;
+    width: 250px;
+
+    /* Background */
+    background-color: #272932;
+    box-shadow: 1px 0px 7px -2px rgba(0, 0, 0, 0.7);
+
+    transition: 250ms ease-in-out;
+}
+
+nav tab {
+    content: "";
+    width: 50px;
+    height: 50px;
+
+    z-index: 1000;
+
+    background-color: #272932;
+    color: white;
+
+    box-shadow: 3px 0px 7px -2px rgba(0, 0, 0, 0.7);
+    /* border: 2px solid white; */
+    border-left: 0px;
+    border-top: 0px;
+    border-bottom-right-radius: .3em;
+
+    top: 0px;
+    left: 250px;
+
+    position: absolute;
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    vertical-align: middle;
+
+    transition: 250ms ease-in-out;
+}
+
+nav.hidden tab {
+    left: 0px;
+    transition: 250ms ease-in-out;
+}
+
+nav tab i.fas {
+    font-size: 2em;
+    top: 50%;
+    padding: 0px;
+}
+
+nav.hidden {
+    margin-left: -250px;
+    transition: 250ms ease-in-out;
+}
+
+nav .logo {
+
+    display: block;
+}
+
+nav .logo img {
+    position: relative;
+    max-width: 250px;
+    padding: 1em;
+}
+
+nav ul {
+    padding: 0px;
+}
+
+nav ul li {
+    padding: .5em 1em .5em 1em;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+nav > credits {
+    bottom: 0px;
+    position: absolute;
+    width: 250px;
+    color: white;
+
+    padding-bottom: .25em
+}
+
+
+
+
+
+.jumbotron {
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px;
+}
+
+
+.jumbotron.hero {
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+
+section {
+    padding: 1em 1em 1em 1em;
+    background-color: white;
+    width: 100%;
+
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 500px;
+
+}
+
+section.center {
+    justify-content: center;
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: column;
+}
+
+
+@media(max-width: 500px) {
+    section {
+        padding: 1em 1em 1em 1em;
+        background-color: white;
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        
+        flex-flow: wrap;
+
+        min-height: 500px;
+
+    }
+
+    .element {
+        width: 50%;
+    }
+
+    section img.element {}
+
+    .element-left {
+        float: left;
+        width: 100%;
+    }
+
+    .element-right {
+        float: right;
+        width: 100%;
+    }
+}
+
+@media(min-width: 501px) and (max-width: 800px) {
+    section {
+        padding: 3em;
+        background-color: white;
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        
+        flex-flow: wrap;
+
+        min-height: 500px;
+
+    }
+
+    .element {
+        width: 50%;
+    }
+
+    section img.element {}
+
+    .element-left {
+        float: left;
+        width: 100%;
+    }
+
+    .element-right {
+        float: right;
+        width: 100%;
+    }
+}
+
+@media(min-width: 801px) and (max-width: 1980px) {
+    section {
+        padding: 7em;
+        background-color: white;
+        width: 100%;
+
+        display: inline-flex;
+        align-items: center;
+        
+
+        min-height: 500px;
+
+    }
+
+    .element {
+        max-width: 50%;
+        
+    }
+
+    section img.element {}
+
+    .element-left {
+        float: left;
+    }
+
+    .element-right {
+        float: right;
+        padding: 2em;
+    }
+}
