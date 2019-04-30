@@ -52,6 +52,8 @@ main::-webkit-scrollbar-thumb:hover {
     box-shadow: 2px 4px 5px 0px rgba(0,0,0,.5);
     border: 0px;
     border-radius: 1em;
+    
+    margin: .5em;
 }
 
 
