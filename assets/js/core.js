@@ -30,6 +30,7 @@ $(function() {
     $('[data-href]').each(function(){
         var href = $(this).attr('data-href');
         $(this).on('click', function() { window.open(href, '_blank'); });
+        $(this).css("cursor", "pointer");
     });
     
     $('[data-link]').each(function(){
@@ -48,6 +49,10 @@ $(function() {
     
     $('[data-background-color]').each(function(){
         $(this).css({"background-color" : $(this).attr('data-background-color')});
+    });
+    
+    $('[data-background-attachment]').each(function(){
+        $(this).css({"background-attachment" : $(this).attr('data-background-attachment')});
     });
     
     
